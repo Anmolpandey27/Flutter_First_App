@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:challenge/screen3.dart';
 import 'package:flutter/material.dart';
 
 class login extends StatefulWidget {
@@ -67,7 +68,14 @@ class _loginState extends State<login> {
                 height: 30,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return screen3(
+                      name: name.text,
+                      email: email.text,
+                    );
+                  }));
+                },
                 child: Text("Login"),
               )
             ],
